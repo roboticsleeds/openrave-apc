@@ -1,0 +1,8 @@
+<KinBody name="kygen_squeakin_eggs_plush_puppies">
+  <Body type="static" name="kygen_squeakin_eggs_plush_puppies">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

@@ -1,0 +1,8 @@
+<KinBody name="cheezit_big_original">
+  <Body type="static" name="cheezit_big_original">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

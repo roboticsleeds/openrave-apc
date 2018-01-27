@@ -1,0 +1,8 @@
+<KinBody name="kong_sitting_frog_dog_toy">
+  <Body type="static" name="kong_sitting_frog_dog_toy">
+    <Geom type="trimesh">
+      <Render>../meshes/depth_integrated.stl</Render>
+      <Data>../meshes/depth_integrated.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

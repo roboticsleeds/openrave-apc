@@ -1,0 +1,8 @@
+<KinBody name="crayola_64_ct">
+  <Body type="static" name="crayola_64_ct">
+    <Geom type="trimesh">
+      <Render>../meshes/tsdf.stl</Render>
+      <Data>../meshes/tsdf.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

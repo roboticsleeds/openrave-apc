@@ -1,0 +1,8 @@
+<KinBody name="first_years_take_and_toss_straw_cups">
+  <Body type="static" name="first_years_take_and_toss_straw_cups">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

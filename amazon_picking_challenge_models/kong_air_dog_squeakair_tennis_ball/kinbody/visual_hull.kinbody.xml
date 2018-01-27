@@ -1,0 +1,8 @@
+<KinBody name="kong_air_dog_squeakair_tennis_ball">
+  <Body type="static" name="kong_air_dog_squeakair_tennis_ball">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

@@ -1,0 +1,8 @@
+<KinBody name="genuine_joe_plastic_stir_sticks">
+  <Body type="static" name="genuine_joe_plastic_stir_sticks">
+    <Geom type="trimesh">
+      <Render>../meshes/depth_integrated.stl</Render>
+      <Data>../meshes/depth_integrated.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

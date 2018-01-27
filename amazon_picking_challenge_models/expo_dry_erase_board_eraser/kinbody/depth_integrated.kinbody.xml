@@ -1,0 +1,8 @@
+<KinBody name="expo_dry_erase_board_eraser">
+  <Body type="static" name="expo_dry_erase_board_eraser">
+    <Geom type="trimesh">
+      <Render>../meshes/depth_integrated.stl</Render>
+      <Data>../meshes/depth_integrated.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

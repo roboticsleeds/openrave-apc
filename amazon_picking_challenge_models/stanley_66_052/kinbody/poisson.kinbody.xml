@@ -1,0 +1,8 @@
+<KinBody name="stanley_66_052">
+  <Body type="static" name="stanley_66_052">
+    <Geom type="trimesh">
+      <Render>../meshes/poisson.stl</Render>
+      <Data>../meshes/poisson.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

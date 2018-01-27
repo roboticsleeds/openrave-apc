@@ -1,0 +1,8 @@
+<KinBody name="stanley_66_052">
+  <Body type="static" name="stanley_66_052">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

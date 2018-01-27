@@ -1,0 +1,8 @@
+<KinBody name="feline_greenies_dental_treats">
+  <Body type="static" name="feline_greenies_dental_treats">
+    <Geom type="trimesh">
+      <Render>../meshes/tsdf_complete.stl</Render>
+      <Data>../meshes/tsdf_complete.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

@@ -1,0 +1,8 @@
+<KinBody name="cheezit_big_original">
+  <Body type="static" name="cheezit_big_original">
+    <Geom type="trimesh">
+      <Render>../meshes/tsdf_complete.stl</Render>
+      <Data>../meshes/tsdf_complete.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

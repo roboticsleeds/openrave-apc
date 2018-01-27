@@ -1,0 +1,8 @@
+<KinBody name="sharpie_accent_tank_style_highlighters">
+  <Body type="static" name="sharpie_accent_tank_style_highlighters">
+    <Geom type="trimesh">
+      <Render>../meshes/tsdf_complete.stl</Render>
+      <Data>../meshes/tsdf_complete.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>

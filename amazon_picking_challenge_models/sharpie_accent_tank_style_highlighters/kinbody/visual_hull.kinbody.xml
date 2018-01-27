@@ -1,0 +1,8 @@
+<KinBody name="sharpie_accent_tank_style_highlighters">
+  <Body type="static" name="sharpie_accent_tank_style_highlighters">
+    <Geom type="trimesh">
+      <Render>../meshes/visual_hull.stl</Render>
+      <Data>../meshes/visual_hull.stl</Data>
+    </Geom>
+  </Body>
+</KinBody>
