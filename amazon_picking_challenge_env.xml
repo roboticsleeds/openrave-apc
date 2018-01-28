@@ -45,16 +45,15 @@
 
 
     <!-- The APC Shelf -->
-
     <KinBody name="kiva_pod">
+        <Translation>-0.41 -0.4 0.825</Translation>
         <Body name="base" type="dynamic">
             <Geom type="trimesh">
                 <Data>./amazon_picking_challenge_models/kiva_pod/meshes/pod_lowres.stl</Data>
                 <Render>./amazon_picking_challenge_models/kiva_pod/meshes/pod_lowres.stl</Render>
                 <Diffusecolor>0.85 0.66 0.51</Diffusecolor>
-
-                <Translation>1.43887078762 -0.144090309739 0.00532209873199</Translation>
-                <RotationMat>0.0 0.0 -1.0 -1.0 0.0 0.0 0.0 1.0 0.0</RotationMat>
+                <Translation>0.41 0.4 -0.825</Translation>
+                <RotationAxis>1 0 0 90</RotationAxis>
             </Geom>
         </Body>
     </KinBody>
@@ -69,7 +68,7 @@
 
     <KinBody name="crayola_64_ct" file="./amazon_picking_challenge_models/crayola_64_ct/kinbody/recommended.kinbody.xml">
     </KinBody>
-
+    <!--
     <KinBody name="dove_beauty_bar" file="./amazon_picking_challenge_models/dove_beauty_bar/kinbody/recommended.kinbody.xml">
     </KinBody>
 
@@ -140,5 +139,5 @@
     </KinBody>
 
     <KinBody name="stanley_66_052" file="./amazon_picking_challenge_models/stanley_66_052/kinbody/recommended.kinbody.xml">
-    </KinBody>
+    </KinBody> -->
 </Environment>
