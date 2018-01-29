@@ -68,11 +68,12 @@
 
     <KinBody name="crayola_64_ct" file="./amazon_picking_challenge_models/crayola_64_ct/kinbody/recommended.kinbody.xml">
     </KinBody>
-    <!--
+
     <KinBody name="dove_beauty_bar" file="./amazon_picking_challenge_models/dove_beauty_bar/kinbody/recommended.kinbody.xml">
     </KinBody>
 
     <KinBody name="dr_browns_bottle_brush" file="./amazon_picking_challenge_models/dr_browns_bottle_brush/kinbody/recommended.kinbody.xml">
+      <RotationMat>0.373302807197 0.927709552683 1.50764586371e-08 -0.0140633569391 0.00565896463398 0.999885092454 0.927602951769 -0.373259912099 0.0151592179589</RotationMat>
     </KinBody>
 
     <KinBody name="elmers_washable_no_run_school_glue" file="./amazon_picking_challenge_models/elmers_washable_no_run_school_glue/kinbody/recommended.kinbody.xml">
@@ -139,5 +140,5 @@
     </KinBody>
 
     <KinBody name="stanley_66_052" file="./amazon_picking_challenge_models/stanley_66_052/kinbody/recommended.kinbody.xml">
-    </KinBody> -->
+    </KinBody>
 </Environment>
