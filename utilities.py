@@ -2,6 +2,7 @@ from openravepy import *
 import openravepy
 import random
 from numpy import *
+import time
 
 class Box(object):
     def __init__(self):
@@ -99,8 +100,6 @@ class Utilities:
         self.env.SetViewer('qtcoin')
         self.env.Load('amazon_picking_challenge_env.xml')
 
-
-
         self.amazon_objects_names = [  "champion_copper_plus_spark_plug",          "cheezit_big_original",
                                         "crayola_64_ct",                            "dove_beauty_bar",
                                         "elmers_washable_no_run_school_glue",
@@ -120,6 +119,8 @@ class Utilities:
 
         self.amazon_objects = map(self.env.GetKinBody, self.amazon_objects_names)
         random.shuffle(self.amazon_objects)
+
+    def randomise_object_location(self):
         self.shelf = self.env.GetKinBody("kiva_pod")
         initial_x = self.shelf.GetTransform()[0][3]
 
@@ -146,7 +147,6 @@ class Utilities:
             amazon_object = self.amazon_objects[object_i]
             box = self.boxes[box_index]
 
-
             transform = box.random_pose(amazon_object.GetTransform())
             amazon_object.SetTransform(transform)
 
@@ -168,5 +168,51 @@ class Utilities:
                 object_i += 1
                 if box_index >= len(self.boxes):
                     box_index = 0
+
+    def _get_translation_rotation(self, arr):
+        rotation = ""
+        for row in range(0, 3):
+            for col in range(0, 3):
+                rotation += str(arr[row, col])
+                if row != 2 or col != 2:  rotation += " "
+
+        translation = ""
+        for row in range(0, 3):
+            translation += str(arr[row][3])
+            if row != 2: translation += " "
+
+        return translation, rotation
+
+    def export_current_environment_to_xml(self):
+        template_file_name = "template.xml"
+        output_file_name = "{}_amazon_picking_challenge.xml".format(time.strftime("%Y%m%d-%H%M%S"))
+
+        with open(template_file_name, "rt") as fin:
+            content = fin.readlines()
+
+        with open(output_file_name, "wt") as fout:
+            shelf = self.shelf
+            transform = shelf.GetTransform()
+            translation, rotation = self._get_translation_rotation(transform)
+            for i in range(0, len(content)):
+                line = content[i]
+                if "{kiva_pod_translation}" in line:
+                    content[i] = line.replace("{kiva_pod_translation}", translation)
+                    break
+
+            for amazon_object_name in self.amazon_objects_names:
+                amazon_object = self.env.GetKinBody(amazon_object_name)
+                transform = amazon_object.GetTransform()
+                translation, rotation = self._get_translation_rotation(transform)
+
+                for i in range(0, len(content)):
+                    line = content[i]
+                    if "{" + amazon_object_name + "_translation}" in line:
+                        content[i] = line.replace("{" + amazon_object_name + "_translation}", translation)
+                    if "{" + amazon_object_name + "_rotation" in line:
+                        content[i] = line.replace("{" + amazon_object_name + "_rotation}", rotation)
+
+            fout.write("\n".join(content))
+
 
 utilities = Utilities()

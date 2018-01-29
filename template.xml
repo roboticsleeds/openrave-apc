@@ -1,0 +1,197 @@
+<Environment>
+    <!--
+        This is an environment specifically for the Amazon Picking Challenge
+        (APC). It is recommended to have the meshes files within the directory
+        of this project, or if you wish to have them separately then you need
+        to correct the paths below.
+
+        Please note that the objects described below do not have any translation
+        or rotation, so we have added a Python program that does random
+        rearangement of the objects on the shelf which should be useful. The
+        script also provides a functionality to export a current random
+        configuration to a static XML file so you can have a static
+        environment.
+
+        Author: Rafael Papallas (www.papallas.me, github.com/papallas)
+
+        Copyright (C) 2018 University of Leeds & Rafael Papallas
+
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    -->
+
+    <!-- Some floor -->
+    <KinBody name="floorwalls">
+        <Body type="static">
+        <Translation>0 0 0</Translation>
+            <Geom type="box">
+                <extents>2.5 2.5 0.001</extents>
+                <translation>0 0 0.000</translation>
+                <diffuseColor>.6 .6 .6</diffuseColor>
+                <ambientColor>0.6 0.6 0.6</ambientColor>
+            </Geom>
+        </Body>
+    </KinBody>
+
+
+    <!-- The APC Shelf -->
+    <KinBody name="kiva_pod">
+        <Translation>-0.41 -0.4 0.825</Translation>
+        <Body name="base" type="dynamic">
+            <Geom type="trimesh">
+                <Data>./amazon_picking_challenge_models/kiva_pod/meshes/pod_lowres.stl</Data>
+                <Render>./amazon_picking_challenge_models/kiva_pod/meshes/pod_lowres.stl</Render>
+                <Diffusecolor>0.85 0.66 0.51</Diffusecolor>
+                <Translation>{kiva_pod_translation}</Translation>
+                <RotationAxis>1 0 0 90</RotationAxis>
+            </Geom>
+        </Body>
+    </KinBody>
+
+    <!-- Products/Objects of the competition -->
+
+    <KinBody name="champion_copper_plus_spark_plug" file="./amazon_picking_challenge_models/champion_copper_plus_spark_plug/kinbody/recommended.kinbody.xml">
+      <Translation>{champion_copper_plus_spark_plug_translation}</Translation>
+      <RotationMat>{champion_copper_plus_spark_plug_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="cheezit_big_original" file="./amazon_picking_challenge_models/cheezit_big_original/kinbody/recommended.kinbody.xml">
+      <Translation>{cheezit_big_original_translation}</Translation>
+      <RotationMat>{cheezit_big_original_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="crayola_64_ct" file="./amazon_picking_challenge_models/crayola_64_ct/kinbody/recommended.kinbody.xml">
+      <Translation>{crayola_64_ct_translation}</Translation>
+      <RotationMat>{crayola_64_ct_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="dove_beauty_bar" file="./amazon_picking_challenge_models/dove_beauty_bar/kinbody/recommended.kinbody.xml">
+      <Translation>{dove_beauty_bar_translation}</Translation>
+      <RotationMat>{dove_beauty_bar_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="dr_browns_bottle_brush" file="./amazon_picking_challenge_models/dr_browns_bottle_brush/kinbody/recommended.kinbody.xml">
+      <Translation>{dr_browns_bottle_brush_translation}</Translation>
+      <RotationMat>{dr_browns_bottle_brush_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="elmers_washable_no_run_school_glue" file="./amazon_picking_challenge_models/elmers_washable_no_run_school_glue/kinbody/recommended.kinbody.xml">
+      <Translation>{elmers_washable_no_run_school_glue_translation}</Translation>
+      <RotationMat>{elmers_washable_no_run_school_glue_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="expo_dry_erase_board_eraser" file="./amazon_picking_challenge_models/expo_dry_erase_board_eraser/kinbody/recommended.kinbody.xml">
+      <Translation>{expo_dry_erase_board_eraser_translation}</Translation>
+      <RotationMat>{expo_dry_erase_board_eraser_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="feline_greenies_dental_treats" file="./amazon_picking_challenge_models/feline_greenies_dental_treats/kinbody/recommended.kinbody.xml">
+      <Translation>{feline_greenies_dental_treats_translation}</Translation>
+      <RotationMat>{feline_greenies_dental_treats_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="first_years_take_and_toss_straw_cups" file="./amazon_picking_challenge_models/first_years_take_and_toss_straw_cups/kinbody/recommended.kinbody.xml">
+      <Translation>{first_years_take_and_toss_straw_cups_translation}</Translation>
+      <RotationMat>{first_years_take_and_toss_straw_cups_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="genuine_joe_plastic_stir_sticks" file="./amazon_picking_challenge_models/genuine_joe_plastic_stir_sticks/kinbody/recommended.kinbody.xml">
+      <Translation>{genuine_joe_plastic_stir_sticks_translation}</Translation>
+      <RotationMat>{genuine_joe_plastic_stir_sticks_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="highland_6539_self_stick_notes" file="./amazon_picking_challenge_models/highland_6539_self_stick_notes/kinbody/recommended.kinbody.xml">
+      <Translation>{highland_6539_self_stick_notes_translation}</Translation>
+      <RotationMat>{highland_6539_self_stick_notes_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="kong_air_dog_squeakair_tennis_ball" file="./amazon_picking_challenge_models/kong_air_dog_squeakair_tennis_ball/kinbody/recommended.kinbody.xml">
+      <Translation>{kong_air_dog_squeakair_tennis_ball_translation}</Translation>
+      <RotationMat>{kong_air_dog_squeakair_tennis_ball_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="kong_duck_dog_toy" file="./amazon_picking_challenge_models/kong_duck_dog_toy/kinbody/recommended.kinbody.xml">
+      <Translation>{kong_duck_dog_toy_translation}</Translation>
+      <RotationMat>{kong_duck_dog_toy_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="kong_sitting_frog_dog_toy" file="./amazon_picking_challenge_models/kong_sitting_frog_dog_toy/kinbody/recommended.kinbody.xml">
+      <Translation>{kong_sitting_frog_dog_toy_translation}</Translation>
+      <RotationMat>{kong_sitting_frog_dog_toy_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="laugh_out_loud_joke_book" file="./amazon_picking_challenge_models/laugh_out_loud_joke_book/kinbody/recommended.kinbody.xml">
+      <Translation>{laugh_out_loud_joke_book_translation}</Translation>
+      <RotationMat>{laugh_out_loud_joke_book_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="kygen_squeakin_eggs_plush_puppies" file="./amazon_picking_challenge_models/kygen_squeakin_eggs_plush_puppies/kinbody/recommended.kinbody.xml">
+      <Translation>{kygen_squeakin_eggs_plush_puppies_translation}</Translation>
+      <RotationMat>{kygen_squeakin_eggs_plush_puppies_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="mark_twain_huckleberry_finn" file="./amazon_picking_challenge_models/mark_twain_huckleberry_finn/kinbody/recommended.kinbody.xml">
+      <Translation>{mark_twain_huckleberry_finn_translation}</Translation>
+      <RotationMat>{mark_twain_huckleberry_finn_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="mead_index_cards" file="./amazon_picking_challenge_models/mead_index_cards/kinbody/recommended.kinbody.xml">
+      <Translation>{mead_index_cards_translation}</Translation>
+      <RotationMat>{mead_index_cards_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="mommys_helper_outlet_plugs" file="./amazon_picking_challenge_models/mommys_helper_outlet_plugs/kinbody/recommended.kinbody.xml">
+      <Translation>{mommys_helper_outlet_plugs_translation}</Translation>
+      <RotationMat>{mommys_helper_outlet_plugs_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="munchkin_white_hot_duck_bath_toy" file="./amazon_picking_challenge_models/munchkin_white_hot_duck_bath_toy/kinbody/recommended.kinbody.xml">
+      <Translation>{munchkin_white_hot_duck_bath_toy_translation}</Translation>
+      <RotationMat>{munchkin_white_hot_duck_bath_toy_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="one_with_nature_soap_dead_sea_mud" file="./amazon_picking_challenge_models/one_with_nature_soap_dead_sea_mud/kinbody/recommended.kinbody.xml">
+      <Translation>{one_with_nature_soap_dead_sea_mud_translation}</Translation>
+      <RotationMat>{one_with_nature_soap_dead_sea_mud_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="oreo_mega_stuf" file="./amazon_picking_challenge_models/oreo_mega_stuf/kinbody/recommended.kinbody.xml">
+      <Translation>{oreo_mega_stuf_translation}</Translation>
+      <RotationMat>{oreo_mega_stuf_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="paper_mate_12_count_mirado_black_warrior" file="./amazon_picking_challenge_models/paper_mate_12_count_mirado_black_warrior/kinbody/recommended.kinbody.xml">
+      <Translation>{paper_mate_12_count_mirado_black_warrior_translation}</Translation>
+      <RotationMat>{paper_mate_12_count_mirado_black_warrior_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="rollodex_mesh_collection_jumbo_pencil_cup" file="./amazon_picking_challenge_models/rollodex_mesh_collection_jumbo_pencil_cup/kinbody/recommended.kinbody.xml">
+      <Translation>{rollodex_mesh_collection_jumbo_pencil_cup_translation}</Translation>
+      <RotationMat>{rollodex_mesh_collection_jumbo_pencil_cup_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="safety_works_safety_glasses" file="./amazon_picking_challenge_models/safety_works_safety_glasses/kinbody/recommended.kinbody.xml">
+      <Translation>{safety_works_safety_glasses_translation}</Translation>
+      <RotationMat>{safety_works_safety_glasses_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="sharpie_accent_tank_style_highlighters" file="./amazon_picking_challenge_models/sharpie_accent_tank_style_highlighters/kinbody/recommended.kinbody.xml">
+      <Translation>{sharpie_accent_tank_style_highlighters_translation}</Translation>
+      <RotationMat>{sharpie_accent_tank_style_highlighters_rotation}</RotationMat>
+    </KinBody>
+
+    <KinBody name="stanley_66_052" file="./amazon_picking_challenge_models/stanley_66_052/kinbody/recommended.kinbody.xml">
+      <Translation>{stanley_66_052_translation}</Translation>
+      <RotationMat>{stanley_66_052_rotation}</RotationMat>
+    </KinBody>
+</Environment>
