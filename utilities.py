@@ -3,6 +3,7 @@ import openravepy
 import random
 from numpy import *
 import time
+import IPython
 
 class Box(object):
     def __init__(self):
@@ -121,6 +122,8 @@ class Utilities:
         random.shuffle(self.amazon_objects)
 
     def randomise_object_location(self):
+        random.shuffle(self.amazon_objects)
+
         self.shelf = self.env.GetKinBody("kiva_pod")
         initial_x = self.shelf.GetTransform()[0][3]
 
@@ -216,3 +219,4 @@ class Utilities:
 
 
 utilities = Utilities()
+IPython.embed()
