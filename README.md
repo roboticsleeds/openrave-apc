@@ -12,4 +12,4 @@ The script also provide a functionality to export a randomise environment to a s
 - **Kiva Pod (Shelf):** Thanks to [http://pwurman.org/amazonpickingchallenge/2015/gazebo_pod.shtml?](http://pwurman.org/amazonpickingchallenge/2015/gazebo_pod.shtml?).
 
 # Contributors
-This work was developed by the Robotics Lab in the School of Computing at the University of Leeds. This work is initially developed and maintained by [Rafael Papallas](http://rpapallas.com).
+This work was developed by the [Robot Manipulation Lab](https://artificial-intelligence.leeds.ac.uk/robot-manipulation/) in the School of Computing at the University of Leeds. This work is initially developed and maintained by [Rafael Papallas](http://rpapallas.com).
